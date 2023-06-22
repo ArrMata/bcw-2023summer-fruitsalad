@@ -32,7 +32,6 @@ class App {
       this[currentRoute.controller.name] = new currentRoute.controller()
     }
   }
-
 }
 
 

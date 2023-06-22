@@ -1,3 +1,4 @@
+import { Player } from "./models/Player.js"
 import { Value } from "./models/Value.js"
 import { EventEmitter } from "./utils/EventEmitter.js"
 import { isValidProp } from "./utils/isValidProp.js"
@@ -8,6 +9,14 @@ class ObservableAppState extends EventEmitter {
 
   /** @type {import('./models/Value.js').Value[]} */
   values = loadState('values', [Value])
+
+  /** @type {import('./models/Player.js').Player[]} */
+  players = loadState('players', [Player])
+
+  activePlayer = null
+
+  fruits = ['pear', 'apple', 'banana']
+  activeFruit = null
 
   // NOTE Used to load initial data
   init() {

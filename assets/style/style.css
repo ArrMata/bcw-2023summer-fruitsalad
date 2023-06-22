@@ -1,1 +1,6 @@
 /* BASIC STYLES HERE */
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
